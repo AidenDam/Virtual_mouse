@@ -1,0 +1,7 @@
+numpy
+pyautogui
+matplotlib
+tensorflow
+mediapipe
+cv2
+keras
