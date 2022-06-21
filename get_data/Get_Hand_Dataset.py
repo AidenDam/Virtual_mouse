@@ -152,8 +152,18 @@ def CaptureImage(name_gesture, folder_name, instance_bonus, delay_count):
     cap.release()
     cv2.destroyAllWindows()
 
-if __name__ == '__main__': 
-    directory = "Move_mouse"
+if __name__ == '__main__':
+    '''
+    i = 
+        1. Double_Left_mouse
+        2. Left_mouse
+        3. Long_press_mouse
+        4. Move_mouse
+        5. Right_mouse
+        6. Scroll_mouse
+    '''
+    i = 'Double_Left_mouse'
+    directory = f"Move_mouse/{i}/"
 
     parent_dir = "D:/"
 
@@ -164,4 +174,4 @@ if __name__ == '__main__':
     except OSError as error:
         print("Directory '%s' can not be created" % directory)
 
-    CaptureImage("Move_mouse", "D:", 50, delay_count=10)
+    CaptureImage(directory, parent_dir, instance_bonus=50, delay_count=10)
