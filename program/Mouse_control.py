@@ -46,6 +46,8 @@ class Mouse_control:
         # print('3', x, y)
         x = np.interp(center[0], (self.frameR, self.w_cam), (0, self.w_screen))
         y = np.interp(center[1], (self.frameR, self.h_cam), (0, self.h_screen))
+        x = min(x, self.w_screen)
+        y = min(y, self.h_screen)
         return (x, y)
 
     def mouse(self, target, center):
